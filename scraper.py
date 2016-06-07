@@ -19,7 +19,7 @@ def removeNL(x):
 
 
 # Create/open a file for data storage
-f = open('gasprices-hamilton.txt', 'w')
+f = open('gasprices-edmonton.txt', 'w')
 
 
 #timestamp for this scraping
@@ -27,7 +27,7 @@ now = time.time()
 
 
 # Open gasbuddy url and load to Beautiful Soup
-url = "http://www.hamiltongasprices.com/"
+url = "http://www.Edmontongasprices.com/"
 page = urllib2.urlopen(url)
 soup = BeautifulSoup(page)
 
