@@ -1,15 +1,8 @@
 import urllib2
 import scraperwiki 
 import time
-import sqlite3
 # from time import strftime
 from BeautifulSoup import BeautifulSoup
-
-scraperwiki.sqlite.save(unique_keys, data, table_name="swdata", verbose=2)
-CREATE TABLE `swdata` (`trend` text, `now` real, `cityName` text, `cityTableAveragePrice` text)
-CREATE TABLE `swdata` (`trend` text, `now` real, `cityName` text, `cityTableAveragePrice` text)
-        scraperwiki.sqlite.save(unique_keys=['country'], data=data)
-def removeNL(x):
 
 def removeNL(x):
     """cleans a string of new lines and spaces"""
@@ -28,7 +21,7 @@ now = time.time()
 
 
 # Open gasbuddy url and load to Beautiful Soup
-url = "http://www.Edmontongasprices.com/"
+url = "http://www.edmontongasprices.com/"
 page = urllib2.urlopen(url)
 soup = BeautifulSoup(page)
 
@@ -71,9 +64,3 @@ scrapedata = { 'now': now, 'cityName': cityName, 'cityTableAveragePrice': cityTa
 
 
 scraperwiki.sqlite.save(unique_keys=['now'],data=scrapedata)
-
-
-
-
-
-
