@@ -1,6 +1,7 @@
 import urllib2
 import scraperwiki 
 import time
+import sqlite3
 # from time import strftime
 from BeautifulSoup import BeautifulSoup
 
